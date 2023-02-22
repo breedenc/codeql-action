@@ -2486,10 +2486,10 @@ const mockRepositoryNwo = parseRepositoryNwo("owner/repo");
   },
   {
     name: "aliases from input",
-    codeqlResolvedLanguages: ["javascript", "csharp", "cpp", "java", "python"],
-    languagesInput: "  typEscript\n \t, C#, c , KoTlin",
+    codeqlResolvedLanguages: ["javascript", "csharp", "cpp", "java", "python", "go"],
+    languagesInput: "  typEscript\n \t, C#, c , golAng, KoTlin",
     languagesInRepository: ["SwiFt", "other"],
-    expectedLanguages: ["javascript", "csharp", "cpp", "java"],
+    expectedLanguages: ["javascript", "csharp", "cpp", "java", "go"],
     expectedApiCall: false,
   },
   {
@@ -2502,10 +2502,10 @@ const mockRepositoryNwo = parseRepositoryNwo("owner/repo");
   },
   {
     name: "aliases from github api",
-    codeqlResolvedLanguages: ["javascript", "csharp", "cpp", "java", "python"],
+    codeqlResolvedLanguages: ["javascript", "csharp", "cpp", "java", "go", "python"],
     languagesInput: "",
-    languagesInRepository: ["  typEscript\n \t", " C#", "c", "other"],
-    expectedLanguages: ["javascript", "csharp", "cpp"],
+    languagesInRepository: ["  typEscript\n \t", " C#", "c", "goLang", "other"],
+    expectedLanguages: ["javascript", "csharp", "cpp", "go"],
     expectedApiCall: true,
   },
   {

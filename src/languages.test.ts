@@ -23,6 +23,7 @@ test("parseLanguage", async (t) => {
   t.deepEqual(parseLanguage("c"), "c");
   t.deepEqual(parseLanguage("c++"), "c++");
   t.deepEqual(parseLanguage("c#"), "c#");
+  t.deepEqual(parseLanguage("golang"), "golang");
   t.deepEqual(parseLanguage("kotlin"), "kotlin");
   t.deepEqual(parseLanguage("typescript"), "typescript");
 
